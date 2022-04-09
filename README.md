@@ -1,1 +1,2 @@
-# Daily codewars coding challenges in order to improve problem solving skills
+# Daily codewars
+coding challenges daily in order to improve problem solving skills
