@@ -30,3 +30,17 @@ function check(a, x) {
     // can also just do a.includes(x) since method returns a true or false value
     return a.includes(x) ? true:false
   }
+//   Simple, given a string of words, return the length of the shortest word(s).
+
+//   String will never be empty and you do not need to account for different data types.
+
+  function findShort(s){
+    s = s.split(' ')
+    let shortestLength = s[0].length;
+    s.forEach(word => {
+      if(word.length < shortestLength){
+        shortestLength = word.length
+      }
+    });
+    return shortestLength
+  }
