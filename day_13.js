@@ -48,3 +48,11 @@ function digPow(n, p){
 // If the parameter is itself not a perfect square then -1 should be returned. You may assume the parameter is non-negative.
 
 // Examples:(Input --> Output)
+
+function findNextSquare(sq) {
+    if(Math.sqrt(sq)%1 !== 0){
+      return -1
+    }else {
+      return (Math.sqrt(sq)+1)**2
+    }
+  }
