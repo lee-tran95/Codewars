@@ -87,3 +87,24 @@ function expandedForm(num) {
     num = num.filter(item => item != 0)
     return num.join(' + ')
   }
+
+// The main idea is to count all the occurring characters in a string. If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
+
+// What if the string is empty? Then the result should be empty object literal, {}.
+
+function count (string) {
+  string  = string.split('')
+  let count = {};
+if(string.length === 0){
+   return {};
+  }else{
+    string.forEach(item =>{
+      if(count[item]){
+        return count[item] = count[item] + 1
+      }else{
+        return count[item] = 1
+      }
+    });
+  }
+  return count
+}
