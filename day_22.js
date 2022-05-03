@@ -42,3 +42,37 @@ function wave(str){
     }
     return wave;
   }
+
+  function wave(str){
+    let result = [];
+    
+    str.split("").forEach((char, index) => {
+        if (/[a-z]/.test(char)) {
+            result.push(str.slice(0, index) + char.toUpperCase() + str.slice(index + 1));
+        }
+    });
+    
+    return result;
+}
+
+// There was a test in your class and you passed it. Congratulations!
+// But you're an ambitious person. You want to know if you're better than the average student in your class.
+
+// You receive an array with your peers' test scores. Now calculate the average and compare your score!
+
+// Return True if you're better, else False!
+
+// Note:
+// Your points are not included in the array of your class's points. For calculating the average point you may add your point to the given array!
+
+function betterThanAverage(classPoints, yourPoints) {
+    let average = yourPoints;
+    for(let i = 0; i < classPoints.length; i++){
+      average += classPoints[i];
+    }
+    if(yourPoints > average/(classPoints.length+1)){
+      return true
+    }else{
+      return false
+    }
+  }
