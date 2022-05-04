@@ -23,3 +23,26 @@ function highAndLow(numbers){
     numbers = numbers.split(' ');
     return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
   }
+
+//   Return the number (count) of vowels in the given string.
+
+//   We will consider a, e, i, o, u as vowels for this Kata (but not y).
+  
+//   The input string will only consist of lower case letters and/or spaces.\
+
+function getCount(str) {
+    let vowelsCount = 0;
+    let vowels ='aeiou'
+    for(let i = 0; i < str.length; i++){
+      if(vowels.indexOf(str[i]) >= 0){
+        vowelsCount++
+      }
+    }
+    return vowelsCount
+  }
+
+  function getCount(str) {
+    var vowelsCount = 0;
+    vowelsCount = str.match(/[aeiou]/gi);
+    return vowelsCount ? vowelsCount.length:0;
+  }
