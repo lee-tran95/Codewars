@@ -25,3 +25,8 @@ function sortArray(array) {
 function noBoringZeros(n) {
     return Number(n.toString().replace(/0*$/,''))
   }
+
+function noBoringZeros(n) {
+    while(n%10==0 && n!=0){n/=10;}
+    return n;
+}
