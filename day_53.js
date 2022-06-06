@@ -17,11 +17,13 @@
 // [Personal thanks to Professor Jim Fowler on Coursera for his awesome classes that I really recommend to any math enthusiast and for showing me this mathematical curiosity too with his usual contagious passion :)]
 
 function tribonacci(signature,n){
+    
     let first = signature[0];
     let second = signature[1];
     let third = signature[2];
     let next = 0;
     let res = [signature[0],signature[1],signature[2]]
+
     if(n === 0) return [];
     if(n === 1) return [signature[0]]
     if(n === 2) return [signature[0], signature[1]]
